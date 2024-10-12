@@ -11,6 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'crear-reserva',
+    loadChildren: () => import('./crear-reserva/crear-reserva.module').then( m => m.CrearReservaPageModule)
+  },
+  {
+    path: 'editar-reserva',
+    loadChildren: () => import('./editar-reserva/editar-reserva.module').then( m => m.EditarReservaPageModule)
+  },
+  {
+    path: 'historial-reserva',
+    loadChildren: () => import('./historial-reserva/historial-reserva.module').then( m => m.HistorialReservaPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+  },
 ];
 
 @NgModule({
