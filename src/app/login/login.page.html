@@ -11,7 +11,11 @@
 
 <ion-content [fullscreen]="true">
   <div class="welcome-message">
-    <p>Bienvenido Estudiante</p>
+    <ion-card class="welcome-card">
+      <ion-card-content>
+        <p>Bienvenido, {{ username }}</p>
+      </ion-card-content>
+    </ion-card>
     <hr>
     <ion-card class="info-box">
       <ion-card-content>

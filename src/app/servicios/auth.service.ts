@@ -4,21 +4,40 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
+  private usuarioPrueba = {
+    correo: 'administrador@xmen.com',
+    contraseña: 'administrador123',
+    nombre: 'Administrador',
+  };
+
+  // Simula el estado de autenticación
+  private isLoggedIn = false;
+  private currentUserName: string | null = null;
 
   constructor() {}
 
+  // Método para autenticar el usuario
+  login(email: string, password: string): boolean {
+    if (email === this.usuarioPrueba.correo && password === this.usuarioPrueba.contraseña) {
+      this.isLoggedIn = true;
+      this.currentUserName = this.usuarioPrueba.nombre;
+      return true;
+    }
+    return false;
+  }
+
+  // Método para verificar si está autenticado
   isAuthenticated(): boolean {
-    // Verifica si hay un token de sesión en localStorage o cualquier método que estés usando
-    return !!localStorage.getItem('token');  // Por ejemplo, si guardas un token JWT
+    return this.isLoggedIn;
   }
 
-  login(token: string) {
-    // Lógica para iniciar sesión, probablemente recibirás un token del servidor
-    localStorage.setItem('token', token);
-  }
-
+  // Método para cerrar sesión
   logout() {
-    // Lógica para cerrar sesión
-    localStorage.removeItem('token');
+    this.isLoggedIn = false;
+    this.currentUserName = null;
+  }
+
+  getCurrentUser(): string {
+    return this.isLoggedIn ? this.currentUserName! : 'Estudiante'; // Usar '!' para indicar que no es null
   }
 }
