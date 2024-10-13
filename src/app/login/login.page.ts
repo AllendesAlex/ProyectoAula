@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -10,12 +12,15 @@ export class LoginPage {
   email!: string;
   password!: string;
 
-  constructor(private navCtrl: NavController) {}
+  constructor(private navCtrl: NavController, private router: Router) {}
+
+  goBack() {
+    this.router.navigate(['/login']);
+  }
 
   login() {
-    // Aquí deberías agregar tu lógica de inicio de sesión
     console.log('Email:', this.email);
     console.log('Password:', this.password);
-    // Ejemplo: Validar el correo y la contraseña y redirigir según el rol
   }
+  
 }

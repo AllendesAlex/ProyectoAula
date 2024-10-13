@@ -1,81 +1,85 @@
-
-// Estilos para el titulo
-
+// Estilos para el título
 ion-toolbar {
-    --background: #6482AD; /* Fondo blanco o el color que prefieras */
-}
-ion-title {
-font-family: sans-serif; /* Usa una fuente básica y consistente */
-font-size: 14px; /* Tamaño de la fuente del título */
-}
-
-ion-icon {
-font-size: 30px; /* Tamaño del ícono de "casa" */
-color: #F5EDED;  /* Color del ícono */
-}
-
-
-ion-content {
-padding: 20px; /* Espaciado general alrededor del contenido */
-}
-
-// Estilos para el footer
-
-ion-footer {
---background: #6482AD; /* Color de fondo del footer */
-padding: 10px; /* Espacio interno del footer */
-}
-
-.footer-title {
-font-size: 14px; /* Tamaño de la fuente del footer */
-text-align: center; /* Centra el texto del footer */
-color: #F5EDED; /* Color del texto del footer */
-}
-
-// Estilos para los botones
-
-ion-header {
---background: #ffffff; /* Fondo blanco o el color que prefieras */
-}
-
-.welcome-message {
-margin: 20px 0; /* Espaciado arriba y abajo */
-}
-
-.button-container {
-display: flex; /* Usar flexbox para centrar los botones */
-flex-direction: column; /* Coloca los botones en columna */
-align-items: center; /* Centra los botones horizontalmente */
-justify-content: center; /* Centra verticalmente si hay espacio */
-margin: 0 30px; /* Margen alrededor del contenedor de botones */
-}
-
-.custom-button {
-width: 100%; /* Hace que el botón ocupe el 100% del ancho del contenedor */
-height: 50px; /* Establece una altura fija para todos los botones */
-margin: 10px 0; /* Espaciado entre los botones */
-border-radius: 25px; /* Redondea los bordes del botón */
---ion-color: #F5EDED; /* Color del texto del botón */
---background: #6482AD; /* Color de fondo del botón */
-}
-.register-message {
-text-align: center; /* Centra el mensaje */
-margin-top: 20px; /* Espaciado arriba */
-color: #666; /* Color del texto */
-}
-
-.info-box {
-    background-color: #6482AD; /* Fondo claro para el contenedor */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 15px; /* Espaciado interno */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin: 0px 30; /* Margen superior e inferior */
+    --background: #6482AD;
+    }
     
-}
-
-.info-box p {
-    font-size: 16px; /* Tamaño de fuente */
-    color: #F5EDED; /* Color del texto */
-    line-height: 1.5; /* Espaciado entre líneas */
-    text-align: center; /* Alineación centrada */
-}
+    ion-title {
+    font-family: sans-serif;
+    font-size: 20px;
+    }
+    
+    ion-icon {
+    font-size: 30px;
+    color: #F5EDED;
+    }
+    
+    ion-content {
+    padding: 20px;
+    }
+    
+    // Estilos para el footer
+    ion-footer {
+    --background: #6482AD;
+    padding: 10px;
+    }
+    
+    .footer-title {
+    font-size: 14px;
+    text-align: center;
+    color: #F5EDED;
+    }
+    
+    // Estilos para los formularios
+    form {
+    margin-top: 20px;
+    }
+    
+    ion-item {
+    margin-bottom: 15px;
+    margin: 0 30px;
+    }
+    
+    // Estilos para los botones
+    
+    .welcome-message {
+    margin: 20px 0;
+    }
+    
+    .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    margin: 0 30px;
+    }
+    
+    .custom-button {
+        width: 100%;
+        height: 50px;
+        margin: 10px 0;
+        border-radius: 25px;
+        --ion-color: #F5EDED;
+        --background: #6482AD;
+        font-size: 16px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .register-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    }
+    
+    .info-box {
+        background-color: #6482AD;
+        margin: 0px 30px;
+    }
+    
+    .info-box p {
+        font-size: 16px;
+        color: #F5EDED;
+        line-height: 1.5;
+        text-align: center;
+        margin: 0px 30;
+    }
+    

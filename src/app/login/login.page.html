@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button>
+      <ion-button (click)="goBack()">
         <ion-icon name="home"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -10,13 +10,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">AulaManager</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-
   <div class="welcome-message">
     <p>Bienvenido Estudiante</p>
     <hr>

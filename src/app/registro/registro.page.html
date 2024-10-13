@@ -1,13 +1,14 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button (click)="goBack()">
-        <ion-icon name="home"></ion-icon> <!-- Icono de la casa -->
+        <ion-icon name="home"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Registro</ion-title>
+    <ion-title>AulaManager</ion-title>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content>
   <form (ngSubmit)="onSubmit(registroForm)" #registroForm="ngForm">
@@ -25,9 +26,9 @@
       <ion-label position="floating">Contraseña</ion-label>
       <ion-input type="password" name="contraseña" ngModel required></ion-input>
     </ion-item>
-    
+
     <div class="button-container">
-    <ion-button expand="full" type="submit">Registrar</ion-button>
+    <ion-button expand="full" class="custom-button" type="submit">Registrar</ion-button>
     </div>
   </form>
 </ion-content>
