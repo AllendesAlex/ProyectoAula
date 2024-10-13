@@ -1,40 +1,54 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then(m => m.RegistroPageModule)
   },
   {
     path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+    loadChildren: () => import('./menu/menu.module').then(m => m.MenuPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'crear-reserva',
-    loadChildren: () => import('./crear-reserva/crear-reserva.module').then( m => m.CrearReservaPageModule)
+    loadChildren: () => import('./crear-reserva/crear-reserva.module').then(m => m.CrearReservaPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'editar-reserva',
-    loadChildren: () => import('./editar-reserva/editar-reserva.module').then( m => m.EditarReservaPageModule)
+    loadChildren: () => import('./editar-reserva/editar-reserva.module').then(m => m.EditarReservaPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'historial-reserva',
-    loadChildren: () => import('./historial-reserva/historial-reserva.module').then( m => m.HistorialReservaPageModule)
+    loadChildren: () => import('./historial-reserva/historial-reserva.module').then(m => m.HistorialReservaPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin',
-    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminPageModule),
+    canActivate: [AuthGuard]
   },
+  {
+    path: '**',
+    redirectTo: 'login'
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  }
 ];
 
 @NgModule({

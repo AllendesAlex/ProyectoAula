@@ -1,11 +1,10 @@
-
-// Estilos para el titulo
-
+// Estilos para el título
 ion-toolbar {
-    --background: #6482AD; /* Fondo blanco o el color que prefieras */
+--background: #6482AD; /* Fondo azul */
 }
+
 ion-title {
-font-family: sans-serif; /* Usa una fuente básica y consistente */
+font-family: sans-serif; /* Fuente básica y consistente */
 font-size: 14px; /* Tamaño de la fuente del título */
 }
 
@@ -14,13 +13,11 @@ font-size: 30px; /* Tamaño del ícono de "casa" */
 color: #F5EDED;  /* Color del ícono */
 }
 
-
 ion-content {
 padding: 20px; /* Espaciado general alrededor del contenido */
 }
 
 // Estilos para el footer
-
 ion-footer {
 --background: #6482AD; /* Color de fondo del footer */
 padding: 10px; /* Espacio interno del footer */
@@ -32,22 +29,22 @@ text-align: center; /* Centra el texto del footer */
 color: #F5EDED; /* Color del texto del footer */
 }
 
+// Estilos para los formularios
+form {
+margin-top: 20px; /* Espaciado arriba del formulario */
+}
+
+ion-item {
+margin-bottom: 15px; /* Espaciado entre los campos del formulario */
+}
+
 // Estilos para los botones
-
-ion-header {
---background: #ffffff; /* Fondo blanco o el color que prefieras */
-}
-
-.welcome-message {
-margin: 20px 0; /* Espaciado arriba y abajo */
-}
-
 .button-container {
 display: flex; /* Usar flexbox para centrar los botones */
 flex-direction: column; /* Coloca los botones en columna */
 align-items: center; /* Centra los botones horizontalmente */
 justify-content: center; /* Centra verticalmente si hay espacio */
-margin: 0 30px; /* Margen alrededor del contenedor de botones */
+margin: 20px 0; /* Margen alrededor del contenedor de botones */
 }
 
 .custom-button {
@@ -58,10 +55,18 @@ border-radius: 25px; /* Redondea los bordes del botón */
 --ion-color: #F5EDED; /* Color del texto del botón */
 --background: #6482AD; /* Color de fondo del botón */
 }
+
 .register-message {
 text-align: center; /* Centra el mensaje */
 margin-top: 20px; /* Espaciado arriba */
 color: #666; /* Color del texto */
+}
+
+// Estilo para el botón de regresar
+.back-button {
+background: transparent; /* Fondo transparente para el botón de regresar */
+color: #F5EDED; /* Color del texto del botón de regresar */
+border: none; /* Sin borde */
 }
 
 .info-box {
@@ -70,7 +75,6 @@ color: #666; /* Color del texto */
     padding: 15px; /* Espaciado interno */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
     margin: 0px 30; /* Margen superior e inferior */
-    
 }
 
 .info-box p {
