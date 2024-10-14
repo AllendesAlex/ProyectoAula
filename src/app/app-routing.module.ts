@@ -22,8 +22,8 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'crear-reserva',
-    loadChildren: () => import('./crear-reserva/crear-reserva.module').then(m => m.CrearReservaPageModule),
+    path: 'hacer-reserva',
+    loadChildren: () => import('./hacer-reserva/hacer-reserva.module').then(m => m.HacerReservaPageModule),
     canActivate: [AuthGuard]
   },
   {
@@ -45,6 +45,11 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'login'
   },
+  {
+    path: 'hacer-reserva',
+    loadChildren: () => import('./hacer-reserva/hacer-reserva.module').then( m => m.HacerReservaPageModule)
+  },
+
 
 ];
 

@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
-import { CrearReservaPageRoutingModule } from './crear-reserva-routing.module';
-import { CrearReservaPage } from './crear-reserva.page';
+
+import { HacerReservaPageRoutingModule } from './hacer-reserva-routing.module';
+
+import { HacerReservaPage } from './hacer-reserva.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CrearReservaPageRoutingModule
+    HacerReservaPageRoutingModule
   ],
-  declarations: [CrearReservaPage]
+  declarations: [HacerReservaPage]
 })
-export class CrearReservaPageModule {}
+export class HacerReservaPageModule {}

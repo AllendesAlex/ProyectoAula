@@ -25,7 +25,7 @@ export class MenuPage {
   }
 
   goToReserva() {
-    this.router.navigate(['/crear-reserva']);
+    this.router.navigate(['/hacer-reserva']);
   }
   
   goToModificarReserva() {

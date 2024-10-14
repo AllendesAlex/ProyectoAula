@@ -17,7 +17,7 @@ export class AdminPage implements OnInit {
     this.router.navigate(['/login']);
 }
 goBack() {
-  this.router.navigate(['/menu']);
+  this.router.navigate(['/login']);
 }
 ngOnInit() {
   this.username = this.authService.getUsername();
