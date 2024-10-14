@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../servicios/auth.service';
 
@@ -7,12 +7,19 @@ import { AuthService } from '../servicios/auth.service';
   templateUrl: './admin.page.html',
   styleUrls: ['./admin.page.scss'],
 })
-export class AdminPage {
+export class AdminPage implements OnInit {
+  username: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 
   logout() {
-    this.authService.logout(); // Llama al método logout del AuthService
-    this.router.navigate(['/login']); // Redirige a la página de login
-  }
+    this.authService.logout();
+    this.router.navigate(['/login']);
+}
+goBack() {
+  this.router.navigate(['/menu']);
+}
+ngOnInit() {
+  this.username = this.authService.getUsername();
+}
 }

@@ -1,16 +1,26 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Admin Panel</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="logout()">
-        <ion-icon name="log-out"></ion-icon>
-        Salir
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="home"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <ion-title>Panel de Administracion</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <p>Bienvenido al panel de administración.</p>
-  <!-- Aquí puedes añadir más contenido relacionado con la administración -->
-</ion-content>
+<ion-content [fullscreen]="true">
+  <div class="welcome-message">
+    <ion-card class="welcome-card">
+      <ion-card-content>
+        <p>Bienvenido, {{ username }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  </ion-content>
+
+    <ion-footer>
+      <ion-toolbar>
+        <ion-title size="small" class="footer-title">© 2024 AulaManager. Todos los derechos reservados.</ion-title>
+      </ion-toolbar>
+    </ion-footer>
