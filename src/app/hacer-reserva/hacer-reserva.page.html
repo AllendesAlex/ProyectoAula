@@ -20,18 +20,24 @@
 
   <div class="grid-container">
     <div *ngFor="let salon of salones" class="salon-card">
-      <img [src]="salon.imagen" [alt]="salon.nombre" class="salon-image" />
-      <h3>{{ salon.nombre }}</h3>
+      <img [src]="salon.imagen" [alt]="salon.nombre" class="imagen-sala" alt="Sala" />
       
+      <h3>{{ salon.nombre }}</h3>
+  
       <label for="fecha">Fecha:</label>
-      <input type="date" [(ngModel)]="salon.fecha">
-
+      <ion-item>
+        <ion-input type="date" [(ngModel)]="salon.fecha"></ion-input>
+      </ion-item>
+  
       <label for="hora">Hora:</label>
-      <input type="time" [(ngModel)]="salon.hora">
-
+      <ion-item>
+        <ion-input type="time" [(ngModel)]="salon.hora"></ion-input>
+      </ion-item>
+  
       <ion-button expand="block" (click)="reservar(salon)">Reservar</ion-button>
     </div>
   </div>
+  
 </ion-content>
 
 <ion-footer>

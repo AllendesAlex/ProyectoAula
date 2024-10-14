@@ -10,20 +10,19 @@ import { AuthService } from '../servicios/auth.service';
 export class HacerReservaPage implements OnInit {
   username: string = '';
   
-  // Definición de los salones con imagen, fecha y hora
   salones = [
-    { nombre: 'Salón 1', imagen: 'assets/imagenes/salon1.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 2', imagen: 'assets/imagenes/salon2.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 3', imagen: 'assets/imagenes/salon3.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 4', imagen: 'assets/imagenes/salon4.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 5', imagen: 'assets/imagenes/salon5.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 6', imagen: 'assets/imagenes/salon6.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 7', imagen: 'assets/imagenes/salon7.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 8', imagen: 'assets/imagenes/salon8.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 9', imagen: 'assets/imagenes/salon9.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 10', imagen: 'assets/imagenes/salon10.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 11', imagen: 'assets/imagenes/salon11.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 12', imagen: 'assets/imagenes/salon12.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón 1', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón 2', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón 3', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón 4', imagen: 'assets/imagenes/SalaNormal-2.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón 5', imagen: 'assets/imagenes/SalaNormal-2.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón 6', imagen: 'assets/imagenes/SalaNormal-2.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón 7', imagen: 'assets/imagenes/SalaPC-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón 8', imagen: 'assets/imagenes/SalaPC-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón 9', imagen: 'assets/imagenes/SalaPC-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón 10', imagen: 'assets/imagenes/SalaPC-2.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón 11', imagen: 'assets/imagenes/SalaPC-2.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón 12', imagen: 'assets/imagenes/SalaPC-2.jpg', fecha: '', hora: '' },
   ];
 
   constructor(private router: Router, private authService: AuthService) { }
