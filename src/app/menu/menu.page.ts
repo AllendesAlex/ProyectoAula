@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; // Asegúrate de importar Router
 import { AuthService } from '../servicios/auth.service';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.page.html',
@@ -9,12 +10,35 @@ import { AuthService } from '../servicios/auth.service';
 export class MenuPage {
   username: string = '';
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router: Router, private location: Location) { 
     const usuarioActual = this.authService.getCurrentUser();
     if (usuarioActual) {
-      this.username = usuarioActual.nombre; // Obtener el nombre del usuario
+      this.username = usuarioActual.nombre;
     } else {
-      this.username = 'Estudiante'; // Valor por defecto si no hay usuario autenticado
+      this.username = 'Estudiante';
     }
   }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
+
+  goToReserva() {
+    this.router.navigate(['/crear-reserva']);
+  }
+  
+  goToModificarReserva() {
+    this.router.navigate(['/editar-reserva']);
+  }
+
+  goToHistorialReserva() {
+    this.router.navigate(['/historial-reserva']);
+  }
+
+  goBack() {
+    this.router.navigate(['/login']);
+  }
+
+  
 }

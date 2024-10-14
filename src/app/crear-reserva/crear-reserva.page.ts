@@ -12,7 +12,6 @@ export class CrearReservaPage {
 
   crearReserva() {
     this.reservaService.crearReserva(this.nuevaReserva).subscribe(response => {
-      // Manejar la respuesta de la creación
     });
   }
 }
