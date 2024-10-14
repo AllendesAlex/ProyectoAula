@@ -13,7 +13,7 @@
   <div class="welcome-message">
     <ion-card class="welcome-card">
       <ion-card-content>
-        <p>Bienvenido, {{ username }}</p> <!-- Usando username -->
+        <p>Bienvenido, {{ username }}</p>
       </ion-card-content>
     </ion-card>
     <hr>
@@ -44,7 +44,28 @@
   <div class="register-message">
     <p>¿No tienes cuenta? <a routerLink="/registro">¡Regístrate!</a></p>
   </div>
+  
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <img src="assets/imagenes/imagen-1.jpg" alt="Imagen 1" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imagenes/imagen-2.jpg" alt="Imagen 2" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imagenes/imagen-3.jpg" alt="Imagen 3" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imagenes/imagen-4.jpg" alt="Imagen 4" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imagenes/imagen-5.jpg" alt="Imagen 5" />
+    </ion-slide>
+  </ion-slides>
+
 </ion-content>
+
+
 
 <ion-footer>
   <ion-toolbar>

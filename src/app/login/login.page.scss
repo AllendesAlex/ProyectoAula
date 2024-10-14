@@ -20,7 +20,6 @@ ion-toolbar {
     // Estilos para el footer
     ion-footer {
     --background: #6482AD;
-    padding: 10px;
     }
     
     .footer-title {
@@ -36,13 +35,13 @@ ion-toolbar {
     
     ion-item {
     margin-bottom: 15px;
-    margin: 0 30px;
+    margin: 0px 30px;
     }
     
     // Estilos para los botones
     
     .welcome-message {
-    margin: 20px 0;
+    margin: 20px 0px;
     }
     
     .button-container {
@@ -50,7 +49,7 @@ ion-toolbar {
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    margin: 0 30px;
+    margin: 0px 30px;
     }
     
     .custom-button {
@@ -80,7 +79,7 @@ ion-toolbar {
         color: #F5EDED;
         line-height: 1.5;
         text-align: center;
-        margin: 0px 30;
+        margin: 0px 30px;
     }
     .welcome-card {
         background-color: #6482AD;
@@ -92,5 +91,28 @@ ion-toolbar {
         color: #F5EDED;
         line-height: 1.5;
         text-align: center;
-        margin: 0px 30;
+        margin: 0px 30px;
     }
+
+    ion-slides {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        margin-top: 20px;
+        margin: 0px 30px;
+      }
+      
+      ion-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px; // Altura del slide
+      }
+      
+      ion-slide img {
+        width: 300px; // Ancho de la imagen
+        height: 300px; // Alto de la imagen
+        object-fit: cover; // Ajusta la imagen sin deformarla
+      }
+      
