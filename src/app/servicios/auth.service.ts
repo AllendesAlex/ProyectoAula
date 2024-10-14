@@ -4,26 +4,35 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  private usuarioPrueba = {
-    correo: 'administrador@xmen.com',
-    contraseña: 'administrador123',
-    nombre: 'Administrador',
-  };
+  private usuarios = [
+    {
+      correo: 'administrador@xmen.com',
+      contraseña: 'administrador123',
+      nombre: 'Administrador',
+      rol: 'admin'
+    },
+    {
+      correo: 'alumno@xmen.com',
+      contraseña: 'alumno123',
+      nombre: 'Alumno',
+      rol: 'alumno'
+    }
+  ];
 
-  // Simula el estado de autenticación
   private isLoggedIn = false;
-  private currentUserName: string | null = null;
+  private currentUser: { nombre: string; rol: string } | null = null;
 
   constructor() {}
 
   // Método para autenticar el usuario
-  login(email: string, password: string): boolean {
-    if (email === this.usuarioPrueba.correo && password === this.usuarioPrueba.contraseña) {
+  login(email: string, password: string): { nombre: string; rol: string } | null {
+    const usuario = this.usuarios.find(u => u.correo === email && u.contraseña === password);
+    if (usuario) {
       this.isLoggedIn = true;
-      this.currentUserName = this.usuarioPrueba.nombre;
-      return true;
+      this.currentUser = { nombre: usuario.nombre, rol: usuario.rol };
+      return this.currentUser; // Devuelve el usuario autenticado
     }
-    return false;
+    return null; // Devuelve null si no se encuentra el usuario
   }
 
   // Método para verificar si está autenticado
@@ -34,10 +43,10 @@ export class AuthService {
   // Método para cerrar sesión
   logout() {
     this.isLoggedIn = false;
-    this.currentUserName = null;
+    this.currentUser = null;
+  }
+  getCurrentUser(): { nombre: string; rol: string } | null {
+    return this.currentUser; // Devuelve el usuario actual o null
   }
 
-  getCurrentUser(): string {
-    return this.isLoggedIn ? this.currentUserName! : 'Estudiante'; // Usar '!' para indicar que no es null
-  }
 }
