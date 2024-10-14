@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'; // Asegúrate de importar Router
+import { Router } from '@angular/router';
 import { AuthService } from '../servicios/auth.service';
 import { Location } from '@angular/common';
 @Component({
@@ -9,7 +9,14 @@ import { Location } from '@angular/common';
 })
 export class MenuPage {
   username: string = '';
-
+  slideOpts = {
+    initialSlide: 0,
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+  };
   constructor(private authService: AuthService, private router: Router, private location: Location) { 
     const usuarioActual = this.authService.getCurrentUser();
     if (usuarioActual) {

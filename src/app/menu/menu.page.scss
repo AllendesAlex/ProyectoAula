@@ -94,3 +94,27 @@ line-height: 1.5;
 text-align: center;
 margin: 0px 30;
 }
+
+.footer-image {
+display: block;
+margin: 30px auto;
+width: calc(100% - 60px);
+max-width: 400px;
+height: auto;
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 50px;               
+    margin-bottom: 30px;
+  }
+  
+  .image {
+    width: 300px;           
+    height: 300px;       
+    margin-bottom: 30px;         
+  }
+  
