@@ -6,6 +6,11 @@
       </ion-button>
     </ion-buttons>
     <ion-title>Panel de Administracion</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="  logout()">Cerrar Sesion
+        <ion-icon name="close-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -18,44 +23,44 @@
     </ion-card>
   </div>
   </ion-content>
-  <div class="button-container">
-  <ion-accordion-group>
-    <ion-accordion value="first">
-      <ion-item slot="header" color="light">
-        <ion-label>Crear Alumno</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Crear:</div>
-    </ion-accordion>
-    <ion-accordion value="second">
-      <ion-item slot="header" color="light">
-        <ion-label>Editar Alumno</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Modificar:</div>
-    </ion-accordion>
-    <ion-accordion value="third">
-      <ion-item slot="header" color="light">
-        <ion-label>Eliminar Alumno</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Eliminar:</div>
-    </ion-accordion>
-    <ion-accordion value="Fourth">
-      <ion-item slot="header" color="light">
-        <ion-label>Historial Alumno</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Historial:</div>
-    </ion-accordion>
-    <ion-accordion value="Fifth">
-      <ion-item slot="header" color="light">
-        <ion-label>Tickets</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">Atender:</div>
-    </ion-accordion>
-  </ion-accordion-group>
-</div>
+  <div class="acordeon-conteiner">
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>Crear Alumno</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Crear:</div>
+      </ion-accordion>
+      <ion-accordion value="second">
+        <ion-item slot="header" color="light">
+          <ion-label>Editar Alumno</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Modificar:</div>
+      </ion-accordion>
+      <ion-accordion value="third">
+        <ion-item slot="header" color="light">
+          <ion-label>Eliminar Alumno</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Eliminar:</div>
+      </ion-accordion>
+      <ion-accordion value="Fourth">
+        <ion-item slot="header" color="light">
+          <ion-label>Historial Alumno</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Historial:</div>
+      </ion-accordion>
+      <ion-accordion value="Fifth">
+        <ion-item slot="header" color="light">
+          <ion-label>Tickets</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Atender:</div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </div>
 
 
 <ion-footer>
   <ion-toolbar>
-    <ion-title size="small" class="footer-title">© 2024 AulaManager. Todos los derechos reservados.</ion-title>
+    <ion-title size="small" class="footer-title">© 2024 AulaManager. Seccion Administracion Derechos Reservados.</ion-title>
   </ion-toolbar>
 </ion-footer>
