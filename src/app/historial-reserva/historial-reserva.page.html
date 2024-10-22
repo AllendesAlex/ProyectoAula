@@ -17,10 +17,18 @@
       </ion-card-content>
     </ion-card>
   </div>
-  </ion-content>
 
-    <ion-footer>
-      <ion-toolbar>
-        <ion-title size="small" class="footer-title">© 2024 AulaManager. Todos los derechos reservados.</ion-title>
-      </ion-toolbar>
-    </ion-footer>
+  <ion-list>
+    <ion-item *ngFor="let reserva of reservas">
+      <h3>{{ reserva.nombre }}</h3>
+      <p>Fecha: {{ reserva.fecha }}</p>
+      <p>Hora: {{ reserva.hora }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title size="small" class="footer-title">© 2024 AulaManager. Todos los derechos reservados.</ion-title>
+  </ion-toolbar>
+</ion-footer>

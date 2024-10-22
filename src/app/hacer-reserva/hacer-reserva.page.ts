@@ -9,7 +9,7 @@ import { AuthService } from '../servicios/auth.service';
 })
 export class HacerReservaPage implements OnInit {
   username: string = '';
-  
+
   salones = [
     { nombre: 'Salón 1', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
     { nombre: 'Salón 2', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
@@ -25,7 +25,7 @@ export class HacerReservaPage implements OnInit {
     { nombre: 'Salón 12', imagen: 'assets/imagenes/SalaPC-2.jpg', fecha: '', hora: '' },
   ];
 
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit() {
     this.username = this.authService.getUsername();
@@ -36,6 +36,24 @@ export class HacerReservaPage implements OnInit {
   }
 
   reservar(salon: any) {
+    if (!salon.fecha || !salon.hora) {
+      alert('Por favor, completa la fecha y la hora.');
+      return;
+    }
+
+    const reservas = JSON.parse(localStorage.getItem('reservas') || '[]');
+
+    const nuevaReserva = {
+      nombre: salon.nombre,
+      fecha: salon.fecha,
+      hora: salon.hora,
+      usuario: this.username,
+    };
+
+    reservas.push(nuevaReserva);
+    localStorage.setItem('reservas', JSON.stringify(reservas));
+
+    alert('Reserva realizada con éxito!');
     console.log('Reservando:', salon);
   }
 }
