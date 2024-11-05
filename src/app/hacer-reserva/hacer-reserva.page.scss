@@ -1,6 +1,7 @@
 // Estilos para el título
 ion-toolbar {
-    --background: #6482AD;
+    --background: #a18594;
+    color: white
   }
   
   ion-title {
@@ -46,12 +47,13 @@ ion-toolbar {
   }
   
   ion-button {
+    --background: #a18594;
     margin-top: 10px;
   }
   
   // Estilos para el footer
   ion-footer {
-    --background: #6482AD;
+    --background: #a18594;
   }
   
   .footer-title {
@@ -62,7 +64,7 @@ ion-toolbar {
   
   // Estilos adicionales
   .welcome-card {
-    background-color: #6482AD;
+    background-color: #a18594;
     margin: 0px 30px;
   }
   

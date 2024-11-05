@@ -1,17 +1,22 @@
 // Estilos para el título
 ion-toolbar {
-    --background: #6482AD;
+    --background: #a18594;
     }
     
     ion-title {
     font-family: sans-serif;
     font-size: 20px;
+    color: white;
     }
     
     ion-icon {
     font-size: 30px;
     color: #F5EDED;
     }
+    ion-button {
+        font-size: 30px;
+        color: #F5EDED;
+        }
     
     ion-content {
     padding: 20px;
@@ -19,9 +24,10 @@ ion-toolbar {
     
     // Estilos para el footer
     ion-footer {
-    --background: #6482AD;
+    --background: #a18594;
+    color: white;
     }
-    
+
     .footer-title {
     font-size: 14px;
     text-align: center;
@@ -58,7 +64,7 @@ ion-toolbar {
         margin: 10px 0;
         border-radius: 25px;
         --ion-color: #F5EDED;
-        --background: #6482AD;
+        --background: #a18594;
         font-size: 16px;
         text-align: center;
         text-transform: uppercase;
@@ -66,11 +72,11 @@ ion-toolbar {
     .register-message {
     text-align: center;
     margin-top: 20px;
-    color: #666;
+    color: #050505;
     }
     
     .info-box {
-        background-color: #6482AD;
+        background-color: #a18594;
         margin: 0px 30px;
     }
     
@@ -82,7 +88,7 @@ ion-toolbar {
         margin: 0px 30px;
     }
     .welcome-card {
-        background-color: #6482AD;
+        background-color: #a18594;
         margin: 0px 30px;
     }
     
