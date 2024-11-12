@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -44,18 +45,12 @@ const routes: Routes = [
   {
     path: '**',
     redirectTo: 'login'
-  },
-  {
-    path: 'hacer-reserva',
-    loadChildren: () => import('./hacer-reserva/hacer-reserva.module').then( m => m.HacerReservaPageModule)
-  },
-
-
+  }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),HttpClientModule
   ],
   exports: [RouterModule]
 })

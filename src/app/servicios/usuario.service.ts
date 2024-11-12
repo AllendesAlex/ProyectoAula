@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private apiUrl = "#"; // Cambia esto a la URL de tu API
+  private apiUrl = 'http://localhost:3000/api/usuarios';
 
   constructor(private http: HttpClient) {}
 
@@ -36,7 +36,7 @@ export class UsuarioService {
   }
 
   private manejarError(error: any) {
-    // Manejo de errores
+    console.error('Ocurrió un error:', error);
     return throwError(error);
   }
 }

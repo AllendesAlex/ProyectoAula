@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { AuthService } from '../servicios/auth.service';
-
+import { UsuarioService } from '../servicios/usuario.service'; 
 
 @Component({
   selector: 'app-login',
@@ -13,6 +13,7 @@ export class LoginPage {
   email!: string;
   password!: string;
   username: string = '';
+  errorMessage: string = '';
   slideOpts = {
     initialSlide: 0,
     speed: 400,
@@ -22,31 +23,21 @@ export class LoginPage {
     },
   };
 
-  constructor(private navCtrl: NavController, private router: Router, private authService: AuthService) {}
+  constructor(private navCtrl: NavController, private router: Router, private authService: AuthService,private usuarioService: UsuarioService) {}
 
   goBack() {
     this.router.navigate(['/login']);
   }
 
   login() {
-    console.log('Email:', this.email);
-    console.log('Password:', this.password);
-
-    const emailIngresado = this.email.trim().toLowerCase();
-    const passwordIngresado = this.password.trim();
-
-    const usuarioAutenticado = this.authService.login(emailIngresado, passwordIngresado);
-
-    if (usuarioAutenticado) {
-      this.username = usuarioAutenticado.nombre;
-      console.log('Inicio de sesión exitoso -', usuarioAutenticado.rol);
-      if (usuarioAutenticado.rol === 'admin') {
-        this.router.navigate(['/admin']);
-      } else if (usuarioAutenticado.rol === 'alumno') {
-        this.router.navigate(['/menu']);
+    this.authService.login(this.email, this.password).subscribe(
+      (user) => {
+        this.authService.setCurrentUser(user); // Guarda el usuario en el servicio
+        this.router.navigate(['/menu']); // Redirige a la página de menú
+      },
+      (error) => {
+        this.errorMessage = 'Credenciales inválidas. Intenta de nuevo.'; // Muestra el error si las credenciales son incorrectas
       }
-    } else {
-      console.log('Credenciales incorrectas');
-    }
+    );
   }
 }
