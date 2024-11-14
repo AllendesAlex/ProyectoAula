@@ -21,7 +21,7 @@ ion-toolbar {
   // Estilos para la cuadrícula de salones
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); // 3 columnas para las 12 imágenes
+    grid-template-columns: repeat(2, 1fr); // 3 columnas para las 12 imágenes
     gap: 20px;
     padding: 10px;
   }

@@ -23,7 +23,7 @@ export class EditarReservaPage implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/historial-reserva']);
+    this.router.navigate(['/menu']);
   }
 
   guardarReserva() {

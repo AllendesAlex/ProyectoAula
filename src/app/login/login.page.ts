@@ -32,11 +32,11 @@ export class LoginPage {
   login() {
     this.authService.login(this.email, this.password).subscribe(
       (user) => {
-        this.authService.setCurrentUser(user); // Guarda el usuario en el servicio
-        this.router.navigate(['/menu']); // Redirige a la página de menú
+        this.authService.setCurrentUser(user);
+        this.router.navigate(['/menu']);
       },
       (error) => {
-        this.errorMessage = 'Credenciales inválidas. Intenta de nuevo.'; // Muestra el error si las credenciales son incorrectas
+        this.errorMessage = 'Credenciales inválidas. Intenta de nuevo.';
       }
     );
   }

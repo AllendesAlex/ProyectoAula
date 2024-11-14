@@ -11,18 +11,16 @@ export class HacerReservaPage implements OnInit {
   username: string = '';
 
   salones = [
-    { nombre: 'Salón 1', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 2', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 3', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 4', imagen: 'assets/imagenes/SalaNormal-2.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 5', imagen: 'assets/imagenes/SalaNormal-2.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 6', imagen: 'assets/imagenes/SalaNormal-2.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 7', imagen: 'assets/imagenes/SalaPC-1.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 8', imagen: 'assets/imagenes/SalaPC-1.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 9', imagen: 'assets/imagenes/SalaPC-1.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 10', imagen: 'assets/imagenes/SalaPC-2.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 11', imagen: 'assets/imagenes/SalaPC-2.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón 12', imagen: 'assets/imagenes/SalaPC-2.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Normal 1', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Normal 2', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Normal 3', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Normal 4', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Normal 5', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Normal 6', imagen: 'assets/imagenes/SalaNormal-2.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Taller 1', imagen: 'assets/imagenes/SalaPC-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Taller 2', imagen: 'assets/imagenes/SalaPC-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Musica', imagen: 'assets/imagenes/SalaPC-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Auditorio', imagen: 'assets/imagenes/SalaPC-2.jpg', fecha: '', hora: '' },
   ];
 
   constructor(private router: Router, private authService: AuthService) {}

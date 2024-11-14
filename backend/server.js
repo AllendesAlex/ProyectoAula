@@ -60,7 +60,17 @@ app.post('/api/login', (req, res) => {
       }
     });
   });
-  
+  app.post('/api/registro', (req, res) => {
+    const { nombre, correo, contraseña } = req.body;
+    const query = 'INSERT INTO usuarios (nombre, email, password) VALUES (?, ?, ?)';
+    db.query(query, [nombre, correo, contraseña], (err, result) => {
+      if (err) {
+        console.error('Error al registrar usuario:', err);
+        return res.status(500).json({ error: 'Error al registrar el usuario' });
+      }
+      res.status(201).json({ message: 'Usuario registrado con éxito' });
+    });
+  });
 
 app.listen(port, () => {
   console.log(`Servidor backend corriendo en http://localhost:${port}`);
