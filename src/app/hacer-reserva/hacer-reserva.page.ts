@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../servicios/auth.service';
+import { ReservaService } from '../servicios/reserva.service';
 
 @Component({
   selector: 'app-hacer-reserva',
@@ -23,7 +24,7 @@ export class HacerReservaPage implements OnInit {
     { nombre: 'Salón Auditorio', imagen: 'assets/imagenes/SalaAuditorio-1.jpg', fecha: '', hora: '' },
   ];
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private router: Router, private authService: AuthService, private reservaService: ReservaService) {}
 
   ngOnInit() {
     this.username = this.authService.getUsername();
@@ -35,23 +36,27 @@ export class HacerReservaPage implements OnInit {
 
   reservar(salon: any) {
     if (!salon.fecha || !salon.hora) {
-      alert('Por favor, completa la fecha y la hora.');
-      return;
+        alert('Por favor, completa la fecha y la hora.');
+        return;
     }
 
-    const reservas = JSON.parse(localStorage.getItem('reservas') || '[]');
-
     const nuevaReserva = {
-      nombre: salon.nombre,
-      fecha: salon.fecha,
-      hora: salon.hora,
-      usuario: this.username,
+        idusuario: this.authService.getCurrentUser()?.id,
+        sala: salon.nombre,
+        fecha: salon.fecha,
+        horaini: salon.hora,
+        horafin: salon.hora, // Asumiendo que hora de inicio y fin son iguales por ahora
     };
 
-    reservas.push(nuevaReserva);
-    localStorage.setItem('reservas', JSON.stringify(reservas));
-
-    alert('Reserva realizada con éxito!');
-    console.log('Reservando:', salon);
-  }
+    this.reservaService.crearReserva(nuevaReserva).subscribe(
+        (response) => {
+            alert('Reserva realizada con éxito!');
+            this.router.navigate(['/historial-reserva']);
+        },
+        (error) => {
+            console.error(error);
+            alert('Error al realizar la reserva.');
+        }
+    );
+}
 }

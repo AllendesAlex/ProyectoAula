@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../servicios/auth.service';
+import { ReservaService } from '../servicios/reserva.service';
 
 @Component({
   selector: 'app-historial-reserva',
@@ -11,12 +12,23 @@ export class HistorialReservaPage implements OnInit {
   username: string = '';
   reservas: any[] = [];
 
-  constructor(private router: Router, private authService: AuthService) {
+  constructor(private router: Router, private authService: AuthService,  private reservaService: ReservaService) {
     this.username = this.authService.getUsername();
   }
 
   ngOnInit() {
-    this.cargarReservas();
+      const usuario = this.authService.getCurrentUser();
+      if (usuario) {
+          this.reservaService.obtenerReservas(usuario.id).subscribe(
+              (data) => {
+                  this.reservas = data;
+              },
+              (error) => {
+                  console.error(error);
+                  alert('Error al cargar el historial de reservas.');
+              }
+          );
+      }
   }
 
   cargarReservas() {
