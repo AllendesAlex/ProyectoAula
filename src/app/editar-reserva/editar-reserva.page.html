@@ -8,6 +8,7 @@
     <ion-title>Editar Reserva</ion-title>
   </ion-toolbar>
 </ion-header>
+<br>
 
 <ion-content [fullscreen]="true">
   <div class="welcome-message">
@@ -31,8 +32,9 @@
       <ion-label position="floating">Hora</ion-label>
       <ion-input type="time" [(ngModel)]="reservaEditada.hora" name="hora" required></ion-input>
     </ion-item>
-
-    <ion-button expand="full" type="submit">Guardar Cambios</ion-button>
+    <div class="button-container">
+    <ion-button expand="full" class="custom-button" type="submit">Guardar Cambios</ion-button>
+    </div>
   </form>
 </ion-content>
 

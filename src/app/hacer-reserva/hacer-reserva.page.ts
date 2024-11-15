@@ -16,11 +16,11 @@ export class HacerReservaPage implements OnInit {
     { nombre: 'Salón Normal 3', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
     { nombre: 'Salón Normal 4', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
     { nombre: 'Salón Normal 5', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón Normal 6', imagen: 'assets/imagenes/SalaNormal-2.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Normal 6', imagen: 'assets/imagenes/SalaNormal-1.jpg', fecha: '', hora: '' },
     { nombre: 'Salón Taller 1', imagen: 'assets/imagenes/SalaPC-1.jpg', fecha: '', hora: '' },
     { nombre: 'Salón Taller 2', imagen: 'assets/imagenes/SalaPC-1.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón Musica', imagen: 'assets/imagenes/SalaPC-1.jpg', fecha: '', hora: '' },
-    { nombre: 'Salón Auditorio', imagen: 'assets/imagenes/SalaPC-2.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Musica', imagen: 'assets/imagenes/SalaMusica-1.jpg', fecha: '', hora: '' },
+    { nombre: 'Salón Auditorio', imagen: 'assets/imagenes/SalaAuditorio-1.jpg', fecha: '', hora: '' },
   ];
 
   constructor(private router: Router, private authService: AuthService) {}

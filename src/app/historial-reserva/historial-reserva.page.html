@@ -17,14 +17,17 @@
       </ion-card-content>
     </ion-card>
   </div>
-
+  <div class="button-container">
   <ion-list>
     <ion-item *ngFor="let reserva of reservas">
       <h3>{{ reserva.nombre }}</h3>
+      <br>
       <p>Fecha: {{ reserva.fecha }}</p>
+      <br>
       <p>Hora: {{ reserva.hora }}</p>
     </ion-item>
   </ion-list>
+  </div>
 </ion-content>
 
 <ion-footer>

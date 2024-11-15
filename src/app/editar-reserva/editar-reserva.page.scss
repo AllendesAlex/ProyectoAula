@@ -17,6 +17,11 @@ ion-toolbar {
     padding: 20px;
     }
     
+    ion-button {
+        --background: #a18594;
+        margin-top: 10px;
+      }
+      
     // Estilos para el footer
     ion-footer {
     --background: #a18594;
